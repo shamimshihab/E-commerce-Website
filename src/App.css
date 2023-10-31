@@ -552,14 +552,26 @@ footer .footer-tel:hover {
 }
 
 .pagination .page-item {
-  padding: 0 8px;
+  padding: 2px 8px;
+  justify-content: center;
+
+  border: "1px solid red";
 }
 
 .pagination .page-item .page-link {
   font-size: 18px;
   padding: 0 8px;
-  color: var(--darken);
+  color: "black";
   transition: 0.5s ease;
+  justify-content: center;
+}
+
+.paginationDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid red; */
+  /* width: 100%; */
 }
 
 .pagination .page-item .page-link:hover {
@@ -1089,4 +1101,126 @@ footer .footer-tel:hover {
 .checkout .payment-card-body {
   flex: 1 1 auto;
   padding: 24px 1rem !important;
+}
+/* sidebar */
+
+.sidebar {
+  width: 250px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  float: left;
+}
+
+/* .content {
+  margin-left: 270px; 
+}
+
+.sidebar h3 {
+  margin-top: 0;
+}
+
+.sidebar label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.sidebar input {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.sidebar button {
+  display: block;
+  background-color: #0074d9;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 220px;
+  float: left;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+} */
+/* Add these styles to your CSS file */
+.gender-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #0074d9;
+}
+
+.gender-buttons button {
+  display: flex;
+  align-items: center;
+  background: rgb(168, 170, 172);
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.gender-buttons .circle {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #0074d9;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color: transparent;
+}
+
+.gender-buttons button.active .circle {
+  background-color: #0074d9;
+}
+
+.gender-buttons button.active {
+  color: black;
+  font-weight: bold;
+}
+/* CSS for Product Type buttons */
+.type-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #0074d9;
+}
+
+.type-buttons button {
+  display: flex;
+  align-items: center;
+  background: rgb(168, 170, 172);
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.type-buttons .circle {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #0074d9;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color: transparent;
+}
+
+.type-buttons button.active .circle {
+  background-color: #0074d9;
+}
+
+.type-buttons button.active {
+  color: black;
+  font-weight: bold;
 }
