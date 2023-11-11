@@ -7,13 +7,11 @@ import { ShopContext } from "./shopcontext";
 import Prod from "./prod";
 import Pagination from "./Pagination";
 
-const ShopItems = () => {
+const ShopItems = ({ searchQuery }) => {
   const { cartItems } = useContext(ShopContext);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(8);
   const allProducts = PRODUCTS;
-
-  // State variables for price range filter, gender filter, and product type filter
   const [minPrice, setMinPrice] = useState(0);
   const [maxPrice, setMaxPrice] = useState(100);
   const [selectedGender, setSelectedGender] = useState("All");
@@ -26,15 +24,31 @@ const ShopItems = () => {
     setSelectedType("All");
   };
 
-  const filteredProducts = allProducts.filter((product) => {
-    const productPrice = product.price;
-    return (
-      productPrice >= minPrice &&
-      productPrice <= maxPrice &&
-      (selectedGender === "All" || product.gender === selectedGender) &&
-      (selectedType === "All" || product.type === selectedType)
-    );
-  });
+  const filteredProducts = allProducts
+    .filter((product) => {
+      if (searchQuery) {
+        const productName = product.name ? product.name.toLowerCase() : "";
+        const productDescription = product.description
+          ? product.description.toLowerCase()
+          : "";
+        const productType = product.type ? product.type.toLowerCase() : "";
+        return (
+          productName.includes(searchQuery.toLowerCase()) ||
+          productDescription.includes(searchQuery.toLowerCase()) ||
+          productType.includes(searchQuery.toLowerCase())
+        );
+      }
+      return true;
+    })
+    .filter((product) => {
+      const productPrice = product.price;
+      return (
+        productPrice >= minPrice &&
+        productPrice <= maxPrice &&
+        (selectedGender === "All" || product.gender === selectedGender) &&
+        (selectedType === "All" || product.type === selectedType)
+      );
+    });
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -46,13 +60,12 @@ const ShopItems = () => {
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
-
   return (
     <>
       <div className="content">
         <div className="sidebar">
           <h3>Filter Options</h3>
-          <div>
+          <div className="m-2 p-2 ">
             <label>Gender: </label>
             <div className="gender-buttons">
               <button
@@ -81,7 +94,7 @@ const ShopItems = () => {
               </button>
             </div>
           </div>
-          <div>
+          <div className="m-2  ">
             <label>Product Type: </label>
             <div className="type-buttons">
               <button
@@ -113,6 +126,7 @@ const ShopItems = () => {
           <div>
             <label>Min Price: </label>
             <input
+              className="m-2 p-2 "
               type="number"
               value={minPrice}
               onChange={(e) => setMinPrice(parseFloat(e.target.value))}
@@ -121,25 +135,57 @@ const ShopItems = () => {
           <div>
             <label>Max Price: </label>
             <input
+              className="m-2 p-2 "
               type="number"
               value={maxPrice}
               onChange={(e) => setMaxPrice(parseFloat(e.target.value))}
             />
           </div>
-          <button onClick={resetFilters}>Reset Filters</button>
+          <button className="m-2 p-2 " onClick={resetFilters}>
+            Reset Filters
+          </button>
         </div>
-        <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-          {currentItems.map((product) => (
-            <Prod key={product.id} data={product} />
-          ))}
+        <div>
+          <div className="row g-4">
+            {searchQuery ? (
+              <>
+                <h1 class="text-black">
+                  Searach Results for: <b>{searchQuery} </b>{" "}
+                </h1>
+              </>
+            ) : (
+              <></>
+            )}
+          </div>
+          <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            {currentItems.map((product) => (
+              <Prod key={product.id} data={product} />
+            ))}
+          </div>
+
+          {currentItems.length == 0 ? (
+            <>
+              <div className="row  m-4">
+                <p className="text-black fs-4">
+                  No results found for {searchQuery}
+                </p>{" "}
+              </div>
+            </>
+          ) : (
+            <></>
+          )}
         </div>
-        <div className="paginationDiv">
-          <Pagination
-            itemsPerPage={itemsPerPage}
-            totalItems={filteredProducts.length}
-            paginate={paginate}
-          />
-        </div>
+        {filteredProducts.length > 0 ? (
+          <>
+            <div className="paginationDiv">
+              <Pagination
+                itemsPerPage={itemsPerPage}
+                totalItems={filteredProducts.length}
+                paginate={paginate}
+              />
+            </div>
+          </>
+        ) : null}
       </div>
     </>
   );

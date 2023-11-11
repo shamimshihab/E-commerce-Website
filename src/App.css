@@ -7,7 +7,7 @@
   --darker: rgba(234, 157, 90, 255);
   --lighter: #cbd6cf;
   --lighter1: #c3dacc86;
-  --lighter2: #e4f0e9da;
+  --lighter2: #9eecdfda;
   --darken: #cca27e;
   --color: orangered;
   --search: #00f7ff;
@@ -869,10 +869,10 @@ footer .footer-tel:hover {
 /* cart-ends-here */
 /* about starts here */
 .about-wrapper {
-  background: url(/src/assets/images/about/banner.png);
+  background: url(/src/assets/images/about/banner2.avif);
   background-size: cover;
   width: 100%;
-  height: 30vh;
+  height: 35vh;
   justify-content: center;
   background-position: center;
   justify-content: center;
@@ -917,13 +917,13 @@ footer .footer-tel:hover {
 }
 
 .contact-wrapper {
-  background: url(/src/assets/images/back.jpg);
+  background: url(/src/assets/images/contactpage.jpg);
   background-size: cover;
-  width: 100%;
-  height: 30vh;
-  justify-content: center;
   background-position: center;
+  width: 100%;
+  height: 40vh;
   justify-content: center;
+
   display: flex;
   flex-direction: column;
 }
@@ -931,6 +931,10 @@ footer .footer-tel:hover {
 .contact-wrapper-details .card {
   border: none;
   background-color: var(--lighter2);
+  height: 450px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-wrapper .text {
@@ -1223,4 +1227,20 @@ footer .footer-tel:hover {
 .type-buttons button.active {
   color: black;
   font-weight: bold;
+}
+
+/* NewArrivals.css */
+
+.product-card {
+  transform: translateX(100%);
+  animation: moveRightToLeft 2s ease-in-out forwards;
+}
+
+@keyframes moveRightToLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }

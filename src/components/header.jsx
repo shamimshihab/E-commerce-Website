@@ -12,15 +12,22 @@ import compare from "../assets/images/compare.svg";
 import wishlist from "../assets/images/wishlist.svg";
 import user from "../assets/images/user.svg";
 import logo from "../assets/images/shoppers.png";
-
+import { useNavigate } from "react-router-dom";
 const header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const { getTotalCartProducts, getTotalCartAmount } = useContext(ShopContext);
+  const [searchQuery, setSearchQuery] = useState("");
   const totalAmount = getTotalCartAmount();
   const totalProducts = getTotalCartProducts();
   const location = useLocation();
   const toggleMenu = () => {
     setShowMenu(!showMenu);
+  };
+  const navigate = useNavigate();
+  const handleSearch = (ev) => {
+    ev.preventDefault();
+    console.log("buttoncLICKED");
+    navigate(`/shop?search=${searchQuery}`);
   };
 
   return (
@@ -79,8 +86,14 @@ const header = () => {
                     placeholder="Find products ..."
                     aria-label="Find products ..."
                     aria-describedby="basic-addon2"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
                   />
-                  <button className="input-group-text" id="basic-addon2">
+                  <button
+                    className="input-group-text"
+                    id="basic-addon2"
+                    onClick={handleSearch}
+                  >
                     search
                   </button>
                 </div>

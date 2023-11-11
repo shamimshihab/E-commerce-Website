@@ -5,7 +5,7 @@ import blog1 from "../assets/images/blog/blog-1.jpg";
 import blog2 from "../assets/images/blog/blog-2.jpg";
 import blog3 from "../assets/images/blog/blog-3.jpg";
 import blog4 from "../assets/images/blog/blog-4.jpg";
-import a6 from "../assets/images/about/a6.jpg";
+import about5 from "../assets/images/about/eCommerce-Cartoon.png";
 import video from "../assets/images/about/1.mp4";
 import Marquee from "react-fast-marquee";
 import orders from "../assets/images/icons/icon1.png";
@@ -13,6 +13,12 @@ import orders1 from "../assets/images/icons/icon2.png";
 import orders2 from "../assets/images/icons/icon3.png";
 import orders3 from "../assets/images/icons/icon4.png";
 import orders4 from "../assets/images/icons/icon5.png";
+import r1 from "../assets/images/about/r1.jpg";
+import r2 from "../assets/images/about/r2.jpg";
+import r3 from "../assets/images/about/r3.jpg";
+import r4 from "../assets/images/about/r4.jpg";
+import r5 from "../assets/images/about/r5.jpeg";
+import r6 from "../assets/images/about/r6.jpg";
 
 import mobileImage from "../assets/images/mobileimage.jpg";
 const about = () => {
@@ -52,18 +58,58 @@ const about = () => {
       <section className="about-us p-5">
         <div className="row">
           <div className="col-md-6">
-            <img src={a6} alt="" className="img-fluid p-5" />
+            <img src={about5} alt="" className="img-fluid p-5" />
           </div>
           <div className="col-md-6 d-flex flex-column align-items-center justify-content-center">
             <h1>
-              <b>Who are we?</b>
+              <b>Why Shoppers?</b>
             </h1>
-            <p className="card-text mb-3">
-              Shoppers Now is your one-stop fashion destination. Discover the
-              latest trends, quality fashion, and affordable elegance. We offer
-              a variety for every occasion. Your satisfaction is our commitment.
-              Join us in the joy of dressing well at Shoppers Now.
-            </p>
+
+            <ol className="card-text">
+              <li>
+                <p className="list-item" style={{ fontSize: "18px" }}>
+                  <strong>Extensive Product Range:</strong> Explore a vast
+                  collection of products ranging from fashion and electronics to
+                  home decor and lifestyle essentials. Our carefully curated
+                  inventory ensures that you find exactly what you're looking
+                  for, and perhaps even discover something new!
+                </p>
+              </li>
+              <li>
+                <p className="list-item" style={{ fontSize: "18px" }}>
+                  <strong>Quality Assurance:</strong> We believe in delivering
+                  products that not only meet but exceed your expectations.
+                  Every item on Shoppers undergoes a stringent quality check,
+                  ensuring you receive only the best.
+                </p>
+              </li>
+              <li>
+                <p className="list-item" style={{ fontSize: "18px" }}>
+                  <strong>User-Friendly Interface:</strong> Navigating our
+                  website is a seamless experience. Our user-friendly interface
+                  allows you to browse effortlessly, find products with ease,
+                  and complete your purchase in just a few clicks.
+                </p>
+              </li>
+
+              <li>
+                <p className="list-item" style={{ fontSize: "18px" }}>
+                  <strong>Prompt Delivery:</strong> We understand that waiting
+                  for your order can be exciting. That's why we've partnered
+                  with reliable shipping services to bring your purchases to
+                  your doorstep swiftly. Expect nothing less than prompt and
+                  reliable delivery.
+                </p>
+              </li>
+              <li>
+                <p className="list-item" style={{ fontSize: "18px" }}>
+                  <strong>Customer-Centric Support:</strong> Have questions or
+                  need assistance? Our dedicated customer support team is here
+                  to help. We pride ourselves on being responsive and committed
+                  to resolving any queries you may have.
+                </p>
+              </li>
+            </ol>
           </div>
         </div>
       </section>
@@ -73,29 +119,25 @@ const about = () => {
           <div className="row">
             <div className="col-12 d-flex flex-column align-items-center">
               <h1 className="mb-3">What our customers say...</h1>
-              <p className="mb-4">
-                Our customers never miss a bit on providing feedback
-              </p>
             </div>
             <div className="col-12 col-md-6 p-3">
               <div className="card mb-3">
                 <div className="row g-0">
                   <div className="col-md-4">
                     <img
-                      src={blog1}
+                      src={r1}
                       className="img-fluid rounded-start"
                       alt="..."
                     />
                   </div>
                   <div className="col-md-8">
                     <div className="card-body">
-                      <h5 className="card-title">Marvel Clein</h5>
+                      <h5 className="card-title">Emily White</h5>
                       <p className="card-text mb-3">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit{" "}
-                        <br />. Doloribus maxime consequatur, ipsam architecto
-                        incidunt volup <br />
-                        tate! Iste ipsa numquam quos nam quibusdam perferendis
-                        excepturi rem, a quo laudantium libero dolore nisi.
+                        Shoppers offers an incredible variety of products, and
+                        each item I've purchased has exceeded my expectations in
+                        terms of quality. It's my go-to place for finding unique
+                        and reliable products.
                       </p>
                       <p className="card-text">
                         <small className="text-body-secondary">
@@ -111,21 +153,94 @@ const about = () => {
               <div className="card mb-3">
                 <div className="row g-0">
                   <div className="col-md-4">
-                    <img
-                      src={blog2}
-                      alt=""
-                      className="img-fluid rounded-start"
-                    />
+                    <img src={r2} alt="" className="img-fluid rounded-start" />
                   </div>
                   <div className="col-md-8">
                     <div className="card-body">
-                      <h5 className="card-title">Melisa Ivy</h5>
+                      <h5 className="card-title">Michael Anderson</h5>
                       <p className="card-text mb-3">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit{" "}
-                        <br />. Doloribus maxime consequatur, ipsam architecto
-                        incidunt volup <br />
-                        tate! Iste ipsa numquam quos nam quibusdam perferendis
-                        excepturi rem, a quo laudantium libero dolore nisi.
+                        Navigating through the Shoppers website is a breeze. The
+                        user-friendly interface makes it easy to find what I'm
+                        looking for, and the checkout process is quick and
+                        efficient. I appreciate the seamless shopping
+                        experience.
+                      </p>
+                      <p className="card-text">
+                        <small className="text-body-secondary">
+                          Last Updated now
+                        </small>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-12 col-md-6 p-3">
+              <div className="card mb-3">
+                <div className="row g-0">
+                  <div className="col-md-4">
+                    <img src={r3} alt="" className="img-fluid rounded-start" />
+                  </div>
+                  <div className="col-md-8">
+                    <div className="card-body">
+                      <h5 className="card-title">Sarah Taylor</h5>
+                      <p className="card-text mb-3">
+                        Shoppers consistently delivers my orders on time, if not
+                        earlier. Their commitment to reliable shipping is
+                        commendable. I can always count on receiving my items
+                        when I need them.
+                      </p>
+                      <p className="card-text">
+                        <small className="text-body-secondary">
+                          Last Updated now
+                        </small>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-12 col-md-6 p-3">
+              <div className="card mb-3">
+                <div className="row g-0">
+                  <div className="col-md-4">
+                    <img src={r4} alt="" className="img-fluid rounded-start" />
+                  </div>
+                  <div className="col-md-8">
+                    <div className="card-body">
+                      <h5 className="card-title">Christopher Smith</h5>
+                      <p className="card-text mb-3">
+                        I had a query about one of my orders, and the Shoppers
+                        customer service team was incredibly responsive and
+                        helpful. They resolved my issue promptly, and their
+                        dedication to customer satisfaction is evident.
+                      </p>
+                      <p className="card-text">
+                        <small className="text-body-secondary">
+                          Last Updated now
+                        </small>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-12 col-md-6 p-3">
+              <div className="card mb-3">
+                <div className="row g-0">
+                  <div className="col-md-4">
+                    <img src={r5} alt="" className="img-fluid rounded-start" />
+                  </div>
+                  <div className="col-md-8">
+                    <div className="card-body">
+                      <h5 className="card-title">Matthew Wilson</h5>
+                      <p className="card-text mb-3">
+                        Shoppers regularly offers amazing deals and discounts. I
+                        love being able to snag quality products at affordable
+                        prices. It's a great incentive for me to keep coming
+                        back.
                       </p>
                       <p className="card-text">
                         <small className="text-body-secondary">
@@ -143,112 +258,19 @@ const about = () => {
                 <div className="row g-0">
                   <div className="col-md-4">
                     <img
-                      src={blog3}
-                      alt=""
-                      className="img-fluid rounded-start"
-                    />
-                  </div>
-                  <div className="col-md-8">
-                    <div className="card-body">
-                      <h5 className="card-title">Tristian Ann</h5>
-                      <p className="card-text mb-3">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit{" "}
-                        <br />. Doloribus maxime consequatur, ipsam architecto
-                        incidunt volup <br />
-                        tate! Iste ipsa numquam quos nam quibusdam perferendis
-                        excepturi rem, a quo laudantium libero dolore nisi.
-                      </p>
-                      <p className="card-text">
-                        <small className="text-body-secondary">
-                          Last Updated now
-                        </small>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-12 col-md-6 p-3">
-              <div className="card mb-3">
-                <div className="row g-0">
-                  <div className="col-md-4">
-                    <img
-                      src={blog4}
-                      alt=""
-                      className="img-fluid rounded-start"
-                    />
-                  </div>
-                  <div className="col-md-8">
-                    <div className="card-body">
-                      <h5 className="card-title">Phillip Omosh</h5>
-                      <p className="card-text mb-3">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit{" "}
-                        <br />. Doloribus maxime consequatur, ipsam architecto
-                        incidunt volup <br />
-                        tate! Iste ipsa numquam quos nam quibusdam perferendis
-                        excepturi rem, a quo laudantium libero dolore nisi.
-                      </p>
-                      <p className="card-text">
-                        <small className="text-body-secondary">
-                          Last Updated now
-                        </small>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-12 col-md-6 p-3">
-              <div className="card mb-3">
-                <div className="row g-0">
-                  <div className="col-md-4">
-                    <img
-                      src={blog2}
-                      alt=""
-                      className="img-fluid rounded-start"
-                    />
-                  </div>
-                  <div className="col-md-8">
-                    <div className="card-body">
-                      <h5 className="card-title">Melisa Ivy</h5>
-                      <p className="card-text mb-3">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit{" "}
-                        <br />. Doloribus maxime consequatur, ipsam architecto
-                        incidunt volup <br />
-                        tate! Iste ipsa numquam quos nam quibusdam perferendis
-                        excepturi rem, a quo laudantium libero dolore nisi.
-                      </p>
-                      <p className="card-text">
-                        <small className="text-body-secondary">
-                          Last Updated now
-                        </small>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-12 col-md-6 p-3">
-              <div className="card mb-3">
-                <div className="row g-0">
-                  <div className="col-md-4">
-                    <img
-                      src={blog1}
+                      src={r6}
                       className="img-fluid rounded-start"
                       alt="..."
                     />
                   </div>
                   <div className="col-md-8">
                     <div className="card-body">
-                      <h5 className="card-title">Marvel Clein</h5>
+                      <h5 className="card-title">Jena Wlton</h5>
                       <p className="card-text mb-3">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit{" "}
-                        <br />. Doloribus maxime consequatur, ipsam architecto
-                        incidunt volup <br />
-                        tate! Iste ipsa numquam quos nam quibusdam perferendis
-                        excepturi rem, a quo laudantium libero dolore nisi.
+                        Security is a top priority for me when shopping online,
+                        and Shoppers has consistently provided a secure platform
+                        for transactions. I feel confident knowing that my
+                        personal information is handled with care.
                       </p>
                       <p className="card-text">
                         <small className="text-body-secondary">

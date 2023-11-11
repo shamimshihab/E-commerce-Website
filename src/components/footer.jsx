@@ -1,7 +1,5 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
-
 import playstore from "../assets/images/pay/play.jpg";
 import appstore from "../assets/images/pay/app.jpg";
 import visa from "../assets/images/pay/pay.png";
