@@ -14,6 +14,7 @@ const featuredproducts = () => {
           <div className="col mb-5">
             <div key={product.id} className="card h-100 m-auto">
               <img
+                style={{ height: "25vh" }}
                 src={product.image}
                 className="card-img-top img-fluid"
                 alt="..."
@@ -22,10 +23,9 @@ const featuredproducts = () => {
                 <p className="card-text mb-2">{product.brand}</p>
                 <h5 className="mb-3">{product.name} </h5>
                 <div className="card-footer m-auto text-center">
-                  <p className="text-danger fs-4">{product.status}</p>
+                  <p className="fs-4">{product.status}</p>
                   <p className="price">
-                    <span className="red"></span>{" "}
-                    <strike>{product.rate} </strike>
+                    <span className="red"></span> {product.rate}
                   </p>
                 </div>
                 <div className="card-footer d-md-none">

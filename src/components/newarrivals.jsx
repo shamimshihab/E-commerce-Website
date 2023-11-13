@@ -10,6 +10,7 @@ const NewArrivals = () => {
         <div className="col mb-5 product-card" key={product.id}>
           <div className="card h-100 m-auto">
             <img
+              style={{ height: "25vh" }}
               src={product.image}
               className="card-img-top img-fluid"
               alt="..."
@@ -21,7 +22,6 @@ const NewArrivals = () => {
                 <p className="fs-4 text-danger">{product.status}</p>
                 <p className="price">
                   <span className="red"></span>
-                  <strike>{product.rate}</strike>
                 </p>
               </div>
               <div className="card-footer d-md-none">

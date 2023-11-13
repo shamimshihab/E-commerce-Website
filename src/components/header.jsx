@@ -11,7 +11,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import compare from "../assets/images/compare.svg";
 import wishlist from "../assets/images/wishlist.svg";
 import user from "../assets/images/user.svg";
-import logo from "../assets/images/shoppers.png";
+import logo from "../assets/images/icon.webp";
 import { useNavigate } from "react-router-dom";
 const header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -83,7 +83,7 @@ const header = () => {
                   <input
                     type="text"
                     className="form-control"
-                    placeholder="Find products ..."
+                    placeholder="Search products ..."
                     aria-label="Find products ..."
                     aria-describedby="basic-addon2"
                     value={searchQuery}
@@ -99,7 +99,7 @@ const header = () => {
                 </div>
               </div>
               <div className="col-md-6 m-auto">
-                <div className="menu-links mt-2 d-none d-md-flex d-lg-flex">
+                <div className="menu-links mt-3 mb-2 d-none d-md-flex d-lg-flex">
                   <div className="ms-auto gap-3">
                     <NavLink
                       to="/"
@@ -108,7 +108,7 @@ const header = () => {
                       }
                       // onClick={toggleMenu}
                     >
-                      HOME
+                      Home
                     </NavLink>
                   </div>
                   <div className="ms-auto gap-3">
@@ -119,7 +119,7 @@ const header = () => {
                       }
                       // onClick={toggleMenu}
                     >
-                      SHOP
+                      Shop
                     </NavLink>
                   </div>
                   <div className="ms-auto gap-3">
@@ -130,7 +130,7 @@ const header = () => {
                       }
                       onClick={toggleMenu}
                     >
-                      BLOG
+                      Blog
                     </NavLink>
                   </div>
                   <div className="ms-auto gap-3">
@@ -141,7 +141,7 @@ const header = () => {
                       }
                       // onClick={toggleMenu}
                     >
-                      ABOUT
+                      About
                     </NavLink>
                   </div>
                   <div className="ms-auto gap-3">
@@ -154,27 +154,14 @@ const header = () => {
                       }
                       // onClick={toggleMenu}
                     >
-                      CONTACT
+                      Contact
                     </NavLink>
                   </div>
                 </div>
               </div>
               <div className="col-md-3">
-                <div className="row d-flex justify-content-center">
-                  <div className="col-12 col-md-2 d-none d-md-flex d-lg-flex m-auto">
-                    <div
-                      className={
-                        location.pathname === "/" ? "active" : "not-active"
-                      }
-                    >
-                      <Link
-                        onClick={toggleMenu}
-                        to=""
-                        className="d-flex align-items-center color-nav me-3"
-                      >
-                        <CgProductHunt className="me-1 fs-2" />
-                      </Link>
-                    </div>
+                <div className="row   d-flex justify-content-center">
+                  <div className="col-12  mt-2 mb-2    col-md-2 d-none d-md-flex d-lg-flex m-auto">
                     <div
                       className={
                         location.pathname === "login" ? "active" : "not-active"

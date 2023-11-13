@@ -1,8 +1,9 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { CgShoppingCart } from "react-icons/cg";
 import { Link } from "react-router-dom";
 import ReactStars from "react-rating-stars-component";
 import { PRODUCTS } from "./products";
+import { PRODUCTS1 } from "./products";
 import { ShopContext } from "./shopcontext";
 import Prod from "./prod";
 import Pagination from "./Pagination";
@@ -11,17 +12,19 @@ const ShopItems = ({ searchQuery }) => {
   const { cartItems } = useContext(ShopContext);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(8);
-  const allProducts = PRODUCTS;
+  const allProducts = PRODUCTS.concat(PRODUCTS1);
   const [minPrice, setMinPrice] = useState(0);
   const [maxPrice, setMaxPrice] = useState(100);
   const [selectedGender, setSelectedGender] = useState("All");
   const [selectedType, setSelectedType] = useState("All");
+  const [selectedRating, setSelectedRating] = useState(0);
 
   const resetFilters = () => {
     setMinPrice(0);
     setMaxPrice(100);
     setSelectedGender("All");
     setSelectedType("All");
+    setSelectedRating(0);
   };
 
   const filteredProducts = allProducts
@@ -46,7 +49,8 @@ const ShopItems = ({ searchQuery }) => {
         productPrice >= minPrice &&
         productPrice <= maxPrice &&
         (selectedGender === "All" || product.gender === selectedGender) &&
-        (selectedType === "All" || product.type === selectedType)
+        (selectedType === "All" || product.type === selectedType) &&
+        (selectedRating === 0 || product.rating >= selectedRating)
       );
     });
 
@@ -56,6 +60,16 @@ const ShopItems = ({ searchQuery }) => {
     indexOfFirstItem,
     indexOfLastItem
   );
+
+  useEffect(() => {}, [
+    minPrice,
+    maxPrice,
+    selectedGender,
+    selectedType,
+    selectedRating,
+  ]);
+
+  console.log("currentITEM", currentItems);
 
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -141,6 +155,17 @@ const ShopItems = ({ searchQuery }) => {
               onChange={(e) => setMaxPrice(parseFloat(e.target.value))}
             />
           </div>
+
+          <div className="m-2 p-2">
+            <label>Rating: </label>
+            <ReactStars
+              count={5}
+              size={24}
+              value={selectedRating}
+              onChange={(rating) => setSelectedRating(rating)}
+            />
+          </div>
+
           <button className="m-2 p-2 " onClick={resetFilters}>
             Reset Filters
           </button>

@@ -12,7 +12,17 @@ import blog3 from "../assets/images/blog/blog-3.jpg";
 import blog4 from "../assets/images/blog/blog-4.jpg";
 import Newsletter from "../components/newsletter";
 import Hero from "../components/hero";
+import r1 from "../assets/images/about/r1.jpg";
+import r2 from "../assets/images/about/r2.jpg";
+import r3 from "../assets/images/about/r3.jpg";
+import r4 from "../assets/images/about/r4.jpg";
+import r5 from "../assets/images/about/r5.jpeg";
+import r6 from "../assets/images/about/r6.jpg";
+import b1 from "../assets/images/blog/b1.avif";
 
+import b2 from "../assets/images/blog/b2.jpg";
+import b3 from "../assets/images/blog/b3.jpg";
+import b4 from "../assets/images/blog/b4.jpg";
 const home = () => {
   return (
     <>
@@ -52,7 +62,6 @@ const home = () => {
           <div className="row">
             <div className="col-12 text-center">
               <h1>Our Exclusive Products</h1>
-              <p>New Design Collection</p>
             </div>
             <Featuredproducts />
           </div>
@@ -63,13 +72,18 @@ const home = () => {
         <div className="container-xxl">
           <div className="row ">
             <div className="repair-details text-center align-items-center">
-              <h2 className="mb-3 text-white">
+              <h1 className="mb-5 text-white">
                 Attractive 70% Off on some products
-              </h2>
-
-              <Link to="/shop" className="btn btn-primary" id="button-link">
-                Explore Here
-              </Link>
+              </h1>
+              <div className="">
+                <Link
+                  to="/shop"
+                  className="btn btn-primary  "
+                  id="button-link-offer"
+                >
+                  Explore Here
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -80,14 +94,13 @@ const home = () => {
           <div className="row">
             <div className="d-flex align-items-center justify-content-center flex-column">
               <h1>New Arrivals</h1>
-              <p>Your Best Designer Outfits</p>
             </div>
             <Newarrivals />
           </div>
         </div>
       </section>
 
-      <Hero />
+      {/* <Hero /> */}
       <section className="hot-deals p-5 d-flex flex-column flex-md-row justify-content-center align-items-center align-items-md-start">
         <div className="container-xxl">
           <div className="row">
@@ -96,7 +109,7 @@ const home = () => {
                 <div className="row g-0">
                   <div className="col-md-4">
                     <img
-                      src={banner}
+                      src={b1}
                       className="img-fluid rounded-start"
                       alt="..."
                     />
@@ -125,7 +138,7 @@ const home = () => {
                 <div className="row g-0">
                   <div className="col-md-4">
                     <img
-                      src={banner1}
+                      src={b2}
                       className="img-fluid rounded-start"
                       alt="..."
                     />
@@ -157,17 +170,16 @@ const home = () => {
           <div className="row">
             <div className="col-12 text-center">
               <h1 className="mb-3">What our customers say...</h1>
-              <p className="mb-4">
-                Our customers never miss a bit on providing feedback
-              </p>
             </div>
             <div className="col-md-3 col-sm-6 mb-4">
               <div className="card">
-                <img src={blog1} className="card-img-top img-fluid" alt="..." />
+                <img src={r1} className="card-img-top img-fluid" alt="..." />
                 <div className="card-body">
                   <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the cards content.
+                    Shoppers offers an incredible variety of products, and each
+                    item I've purchased has exceeded my expectations in terms of
+                    quality. It's my go-to place for finding unique and reliable
+                    products.
                   </p>
                   <Link to="about">
                     <button className="mt-4">Learn more</button>
@@ -178,11 +190,13 @@ const home = () => {
 
             <div className="col-md-3 col-sm-6 mb-4">
               <div className="card">
-                <img src={blog2} className="card-img-top img-fluid" alt="..." />
+                <img src={r2} className="card-img-top img-fluid" alt="..." />
                 <div className="card-body">
                   <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the cards content.
+                    Navigating through the Shoppers website is a breeze. The
+                    user-friendly interface makes it easy to find what I'm
+                    looking for, and the checkout process is quick and
+                    efficient. I appreciate the seamless shopping experience.
                   </p>
                   <Link to="about">
                     <button className="mt-4">Learn more</button>
@@ -193,11 +207,13 @@ const home = () => {
 
             <div className="col-md-3 col-sm-6 mb-4">
               <div className="card">
-                <img src={blog3} className="card-img-top img-fluid" alt="..." />
+                <img src={r3} className="card-img-top img-fluid" alt="..." />
                 <div className="card-body">
                   <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the cards content.
+                    Shoppers consistently delivers my orders on time, if not
+                    earlier. Their commitment to reliable shipping is
+                    commendable. I can always count on receiving my items when I
+                    need them.
                   </p>
                   <Link to="about">
                     <button className="mt-4">Learn more</button>
@@ -208,11 +224,13 @@ const home = () => {
 
             <div className="col-md-3 col-sm-6 mb-4">
               <div className="card">
-                <img src={blog4} className="card-img-top img-fluid" alt="..." />
+                <img src={r4} className="card-img-top img-fluid" alt="..." />
                 <div className="card-body">
                   <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the cards content.
+                    I had a query about one of my orders, and the Shoppers
+                    customer service team was incredibly responsive and helpful.
+                    They resolved my issue promptly, and their dedication to
+                    customer satisfaction is evident.
                   </p>
                   <Link to="about">
                     <button className="mt-4">Learn more</button>

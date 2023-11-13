@@ -1,30 +1,37 @@
 /* eslint-disable no-unused-vars */
-import pr1 from "../assets/images/products/f1.jpg";
-import pr2 from "../assets/images/products/f2.jpg";
-import pr3 from "../assets/images/products/f3.jpg";
-import pr4 from "../assets/images/products/f4.jpg";
-import pr5 from "../assets/images/products/f5.jpg";
-import pr6 from "../assets/images/products/f6.jpg";
-import pr7 from "../assets/images/products/f7.jpg";
-import pr8 from "../assets/images/products/f8.jpg";
-import pro1 from "../assets/images/products/n1.jpg";
-import pro2 from "../assets/images/products/n2.jpg";
-import pro3 from "../assets/images/products/n3.jpg";
-import pro4 from "../assets/images/products/n4.jpg";
-import pro5 from "../assets/images/products/n5.jpg";
-import pro6 from "../assets/images/products/n6.jpg";
-import pro7 from "../assets/images/products/n7.jpg";
-import pro8 from "../assets/images/products/n8.jpg";
-import img1 from "../assets/images/products/img1.png";
-import img2 from "../assets/images/products/img2.png";
-import img3 from "../assets/images/products/img3.png";
-import img4 from "../assets/images/products/img4.png";
-import img5 from "../assets/images/products/img5.png";
-import img6 from "../assets/images/products/img6.png";
-import img7 from "../assets/images/products/img7.png";
-import img8 from "../assets/images/products/img8.png";
+import pr1 from "../assets/images/products/p1.avif";
+import pr2 from "../assets/images/products/p2.jpeg";
+import pr3 from "../assets/images/products/p3.jpg";
+import pr4 from "../assets/images/products/p4.png";
+import pr5 from "../assets/images/products/p5.webp";
+import pr6 from "../assets/images/products/p6.jpg";
+import pr7 from "../assets/images/products/p7.webp";
+import pr8 from "../assets/images/products/p8.avif";
+import pro1 from "../assets/images/products/p9.webp";
+import pro2 from "../assets/images/products/p10.jpg";
+import pro3 from "../assets/images/products/p11.webp";
+import pro4 from "../assets/images/products/p12.jpg";
+import pro5 from "../assets/images/products/p14.webp";
+import pro6 from "../assets/images/products/p15.jpg";
+import pro7 from "../assets/images/products/p16.webp";
+import pro8 from "../assets/images/products/p17.jpg";
+import img1 from "../assets/images/products/p18.webp";
+import img2 from "../assets/images/products/p19.jpg";
+import img3 from "../assets/images/products/p20.jpg";
+import img4 from "../assets/images/products/p21.jpg";
+import img5 from "../assets/images/products/p22.jpg";
+import img6 from "../assets/images/products/p23.jpg";
+import img7 from "../assets/images/products/p24.jpg";
+import img8 from "../assets/images/products/p25.jpg";
+import img9 from "../assets/images/products/p27.jpg";
+import img10 from "../assets/images/products/p28.jpg";
+import img11 from "../assets/images/products/p29.jpg";
+import img12 from "../assets/images/products/p30.jpg";
+import img13 from "../assets/images/products/p31.jpg";
+import img14 from "../assets/images/products/p32.jpg";
+import img15 from "../assets/images/products/p33.jpg";
+import img16 from "../assets/images/products/p34.jpg";
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const PRODUCTS = [
   {
     id: 0,
@@ -34,6 +41,7 @@ export const PRODUCTS = [
     brand: "Calvin Klein",
     gender: "Men",
     type: "Shirt",
+    rating: 4,
   },
   {
     id: 1,
@@ -45,6 +53,7 @@ export const PRODUCTS = [
     rate: "50% Off",
     gender: "Men",
     type: "tshirt",
+    rating: 5,
   },
   {
     id: 2,
@@ -56,6 +65,7 @@ export const PRODUCTS = [
     rate: "50% Off",
     gender: "Women",
     type: "pant",
+    rating: 5,
   },
   {
     id: 3,
@@ -67,6 +77,7 @@ export const PRODUCTS = [
     rate: "50% Off",
     gender: "Men",
     type: "pant",
+    rating: 5,
   },
   {
     id: 4,
@@ -78,6 +89,7 @@ export const PRODUCTS = [
     rate: "50% Off",
     gender: "Men",
     type: "tshirt",
+    rating: 4,
   },
   {
     id: 5,
@@ -88,6 +100,7 @@ export const PRODUCTS = [
     status: "in stock",
     rate: "50% Off",
     gender: "Women",
+    rating: 5,
   },
   {
     id: 6,
@@ -99,6 +112,7 @@ export const PRODUCTS = [
     rate: "50% Off",
     gender: "Kids",
     type: "tshirt",
+    rating: 4,
   },
   {
     id: 7,
@@ -109,6 +123,7 @@ export const PRODUCTS = [
     status: "in stock",
     rate: "50% Off",
     gender: "Women",
+    rating: 4,
   },
   {
     id: 8,
@@ -118,6 +133,7 @@ export const PRODUCTS = [
     brand: "Calvin Klein",
     status: "in stock",
     rate: "50% Off",
+    rating: 5,
   },
   {
     id: 9,
@@ -128,6 +144,7 @@ export const PRODUCTS = [
     status: "in stock",
     rate: "50% Off",
     gender: "Kids",
+    rating: 4,
   },
   {
     id: 10,
@@ -137,6 +154,7 @@ export const PRODUCTS = [
     brand: "Adidas",
     status: "in stock",
     rate: "50% Off",
+    rating: 5,
   },
   {
     id: 11,
@@ -146,6 +164,7 @@ export const PRODUCTS = [
     brand: "Levi s",
     status: "in stock",
     rate: "50% Off",
+    rating: 4,
   },
   {
     id: 12,
@@ -155,6 +174,7 @@ export const PRODUCTS = [
     brand: "Under Armour",
     status: "in stock",
     rate: "50% Off",
+    rating: 5,
   },
   {
     id: 13,
@@ -164,6 +184,7 @@ export const PRODUCTS = [
     brand: "H&M",
     status: "in stock",
     rate: "50% Off",
+    rating: 4,
   },
   {
     id: 14,
@@ -173,6 +194,7 @@ export const PRODUCTS = [
     brand: "Puma",
     status: "in stock",
     rate: "50% Off",
+    rating: 4,
   },
   {
     id: 15,
@@ -180,10 +202,10 @@ export const PRODUCTS = [
     name: "Women's Classic Fit Crewneck T-Shirt",
     price: 29.5,
     brand: "Ralph Lauren",
+    rating: 5,
   },
 ];
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const PRODUCTS1 = [
   {
     id: 16,
@@ -193,6 +215,7 @@ export const PRODUCTS1 = [
     brand: "Calvin Klein",
     status: "in stock",
     rate: "60% off",
+    rating: 4,
   },
   {
     id: 17,
@@ -202,6 +225,7 @@ export const PRODUCTS1 = [
     brand: "Nike",
     status: "in stock",
     rate: "60% off",
+    rating: 5,
   },
   {
     id: 18,
@@ -211,6 +235,7 @@ export const PRODUCTS1 = [
     brand: "Adidas",
     status: "in stock",
     rate: "60% off",
+    rating: 4,
   },
   {
     id: 19,
@@ -220,6 +245,7 @@ export const PRODUCTS1 = [
     brand: "Levi s",
     status: "out of stock",
     rate: "normal rates",
+    rating: 5,
   },
   {
     id: 20,
@@ -229,6 +255,7 @@ export const PRODUCTS1 = [
     brand: "Under Armour",
     status: "out of stock",
     rate: "normal rates",
+    rating: 5,
   },
   {
     id: 21,
@@ -238,6 +265,7 @@ export const PRODUCTS1 = [
     brand: "H&M",
     status: "out of stock",
     rate: "normal rates",
+    rating: 4,
   },
   {
     id: 22,
@@ -247,6 +275,7 @@ export const PRODUCTS1 = [
     brand: "Puma",
     status: "out of stock",
     rate: "normal rates",
+    rating: 5,
   },
   {
     id: 23,
@@ -256,5 +285,92 @@ export const PRODUCTS1 = [
     brand: "Ralph Lauren",
     status: "out of stock",
     rate: "normal rates",
+    rating: 4,
+  },
+  {
+    id: 24,
+    image: img9,
+    name: "Women's Classic Fit Crewneck T-Shirt",
+    price: 29.5,
+    brand: "Ralph Lauren",
+    status: "out of stock",
+    rate: "normal rates",
+    rating: 4,
+  },
+  {
+    id: 25,
+    image: img10,
+    name: "Women's Classic Fit Crewneck T-Shirt",
+    price: 29.5,
+    brand: "Ralph Lauren",
+    status: "out of stock",
+    rate: "normal rates",
+    rating: 5,
+  },
+  {
+    id: 26,
+    image: img11,
+    name: "Women's Classic Fit Crewneck T-Shirt",
+    price: 29.5,
+    brand: "Ralph Lauren",
+    status: "out of stock",
+    rate: "normal rates",
+    rating: 5,
+  },
+
+  {
+    id: 27,
+    image: img12,
+    name: "Women's Classic Fit Crewneck T-Shirt",
+    price: 29.5,
+    brand: "Ralph Lauren",
+    status: "out of stock",
+    rate: "normal rates",
+    rating: 4,
+  },
+
+  {
+    id: 28,
+    image: img13,
+    name: "Women's Classic Fit Crewneck T-Shirt",
+    price: 29.5,
+    brand: "Ralph Lauren",
+    status: "out of stock",
+
+    rate: "normal rates",
+    rating: 5,
+  },
+
+  {
+    id: 29,
+    image: img14,
+    name: "Women's Classic Fit Crewneck T-Shirt",
+    price: 29.5,
+    brand: "Ralph Lauren",
+    status: "out of stock",
+    rate: "normal rates",
+    rating: 5,
+  },
+
+  {
+    id: 30,
+    image: img15,
+    name: "Women's Classic Fit Crewneck T-Shirt",
+    price: 29.5,
+    brand: "Ralph Lauren",
+    status: "out of stock",
+    rate: "normal rates",
+    rating: 4,
+  },
+
+  {
+    id: 31,
+    image: img16,
+    name: "Women's Classic Fit Crewneck T-Shirt",
+    price: 29.5,
+    brand: "Ralph Lauren",
+    status: "out of stock",
+    rate: "normal rates",
+    rating: 4,
   },
 ];

@@ -7,9 +7,11 @@ const contact = () => {
       <section className="contact-wrapper p-5">
         <div className="container-xxl">
           <div className="row">
-            <div className="col-12 text-center">
-              <h1 className="text">Visit our shop</h1>
-              <p className=" text fs-2">We are only a step away from you</p>
+            <div className="col-12 mt-20">
+              <h1 className="text-white ">Visit our shop</h1>
+              <p className=" text-white fs-4">
+                We are only a step away from you
+              </p>
             </div>
           </div>
         </div>
