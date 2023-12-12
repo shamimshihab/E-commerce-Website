@@ -547,8 +547,8 @@ footer p {
 }
 
 footer .footer-title {
-  border-bottom: 2px solid var(--darken);
-  width: 30%;
+  border-bottom: 2px solid rgb(54, 54, 241);
+  width: 50%;
 }
 
 footer .footer-tel {
@@ -611,7 +611,7 @@ footer .footer-tel:hover {
 }
 
 .login-wrapper {
-  background-color: var(--lighter1);
+  background-color: rgb(242, 244, 245);
 }
 
 .login-wrapper .card {

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Details from "../pages/details";
 import { useNavigate } from "react-router-dom";
 const prod = (props) => {
-  const { id, name, price, image, brand } = props.data;
+  const { id, name, price, image, brand, rating } = props.data;
   const { addToCart, cartItems, viewProductDetails } = useContext(ShopContext);
   const navigate = useNavigate();
   const cartItemAmount = cartItems[id];
@@ -28,29 +28,31 @@ const prod = (props) => {
           </Link>
 
           <div className="card-body">
-            <p className="card-text mb-2">{brand}</p>
-            <h5>{name} </h5>
-            <ReactStars
-              count={5}
-              edit={false}
-              value={4}
-              size={24}
-              activeColor="#EA9D5A"
-            />
-            <div className="mb-3">
-              <p className="price mb-2">
-                <span className="red">{price} </span>&nbsp;{" "}
-                <strike>{price * 2}$</strike>
-              </p>
-              <Link to="/details" onClick={() => viewProductDetails(id)}>
-                <p className="text-center">
-                  <button className="fs-4" id="clear-cart">
-                    View Details
-                  </button>
+            <div style={{ height: "65%" }}>
+              <p className="card-text mb-2">{brand}</p>
+              <h5>{name} </h5>
+              <ReactStars
+                count={5}
+                edit={false}
+                value={rating}
+                size={24}
+                activeColor="#EA9D5A"
+              />
+              <div className="mb-3">
+                <p className="price mb-2">
+                  <span className="red">{price} </span>&nbsp;{" "}
+                  <strike>{price * 2}$</strike>
                 </p>
-              </Link>
+              </div>
             </div>
-            <div className="d-flex justify-content-center">
+            <Link to="/details" onClick={() => viewProductDetails(id)}>
+              <p className="text-center">
+                <button className="fs-4" id="clear-cart">
+                  View Details
+                </button>
+              </p>
+            </Link>
+            <div className="d-flex justify-content-center align-items-end">
               <button
                 onClick={() => {
                   addToCart(id);
