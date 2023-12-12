@@ -77,7 +77,7 @@ const ShopItems = ({ searchQuery }) => {
   return (
     <>
       <div className="content">
-        <div className="sidebar">
+        <div className="sidebar ">
           <h3>Filter Options</h3>
           <div className="m-2 p-2 ">
             <label>Gender: </label>
@@ -171,7 +171,7 @@ const ShopItems = ({ searchQuery }) => {
           </button>
         </div>
         <div>
-          <div className="row g-4">
+          <div className="row ">
             {searchQuery ? (
               <>
                 <h1 class="text-black">
@@ -191,9 +191,7 @@ const ShopItems = ({ searchQuery }) => {
           {currentItems.length == 0 ? (
             <>
               <div className="row  m-4">
-                <p className="text-black fs-4">
-                  No results found for {searchQuery}
-                </p>{" "}
+                <p className="text-black fs-4">No results found </p>{" "}
               </div>
             </>
           ) : (

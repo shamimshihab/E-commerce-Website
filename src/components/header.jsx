@@ -49,9 +49,10 @@ const header = () => {
 
               <Link to="/">
                 <img src={logo} alt="logo" className="img-fluid logo" />
+                <span className="d-inline-block ms-2 fs-4">Shoppers</span>
               </Link>
 
-              <button className="cart-span fs-3 d-md-none">
+              <button className="cart-span fs-4 d-md-none">
                 <Link
                   to="cart"
                   className={
@@ -170,9 +171,9 @@ const header = () => {
                       <Link
                         onClick={toggleMenu}
                         to="/login"
-                        className="d-flex align-items-center color-nav me-3"
+                        className="d-flex align-items-center color-white me-3"
                       >
-                        <VscAccount className="me-1 fs-2" />
+                        <VscAccount className=" fs-2" />
                       </Link>
                     </div>
                     <div
@@ -183,9 +184,9 @@ const header = () => {
                       <Link
                         onClick={toggleMenu}
                         to="/cart"
-                        className="d-flex align-items-center color-nav me-3 cart-span-one"
+                        className="d-flex align-items-center color-white me-3 cart-span-one"
                       >
-                        <CgShoppingCart className="me-1 fs-2" />
+                        <CgShoppingCart className="fs-1" />
                         <div>
                           <p>
                             <b>

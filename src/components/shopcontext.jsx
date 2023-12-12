@@ -48,10 +48,15 @@ const shopcontext = (props) => {
   };
 
   const removeToCart = (productId) => {
-    setCartItems((prev) => ({
-      ...prev,
-      [productId]: prev[productId] - 1,
-    }));
+    setCartItems((prev) => {
+      const updatedCart = { ...prev };
+      if (updatedCart[productId] > 0) {
+        updatedCart[productId] -= 1;
+      } else {
+        updatedCart[productId] = 0;
+      }
+      return updatedCart;
+    });
   };
 
   const updateCartItemCount = (newAmount, productId) => {

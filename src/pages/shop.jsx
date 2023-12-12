@@ -21,7 +21,7 @@ const shop = () => {
         </div>
       </section>
 
-      <Hero />
+      {/* <Hero /> */}
 
       <Newsletter />
     </>

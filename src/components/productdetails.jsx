@@ -50,10 +50,16 @@ const ProductDetails = () => {
               </p>
               <p className="card-text">{product.description}</p>
               <p className="card-text mb-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />{" "}
-                Quibusdam tempore unde aperiam, consectetur harum a eum error,{" "}
-                <br /> libero nemo quisquam ex assumenda corrupti rerum aut quod
-                et sint facere reprehenderit?
+                Introducing our signature piece. This garment epitomizes
+                contemporary fashion, boasting a sophisticated design that
+                effortlessly blends trendiness with unparalleled comfort and
+                exceptional quality. Crafted from premium, breathable fabrics,
+                this ensures a luxurious feel against the skin while providing
+                maximum comfort throughout the day. Our commitment to offering
+                top-notch quality at an affordable price shines through in this
+                garment. Embrace the latest trends without compromising on
+                comfort or breaking the bank. The Product delivers unbeatable
+                value, allowing you to elevate your style effortlessly.
               </p>
 
               <div className="d-flex align-items-center mb-3 col-6">
@@ -79,7 +85,7 @@ const ProductDetails = () => {
                 </button>
               </div>
 
-              <div className="d-flex justify-content-center">
+              <div className="d-flex justify-content-start">
                 <button
                   onClick={() => {
                     addToCart(product.id);
