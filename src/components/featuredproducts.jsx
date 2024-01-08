@@ -12,7 +12,7 @@ const featuredproducts = () => {
       <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 p-3">
         {PRODUCTS.slice(8, 16).map((product) => (
           <div className="col mb-5">
-            <div key={product.id} className="card h-100 m-auto">
+            <div key={product.id} className="card h-10 m-auto">
               <img
                 style={{ height: "25vh" }}
                 src={product.image}
@@ -20,9 +20,11 @@ const featuredproducts = () => {
                 alt="..."
               />
               <div className="card-body">
-                <p className="card-text mb-2">{product.brand}</p>
-                <h5 className="mb-3">{product.name} </h5>
-                <div className="card-footer m-auto text-center">
+                <p className="card-text mb-2 ">{product.brand}</p>
+                <h5 className="mb-3" style={{ height: "5vh" }}>
+                  {product.name}{" "}
+                </h5>
+                <div className="card-footer m-auto text-center h-20">
                   <p className="fs-4">{product.status}</p>
                   <p className="price">
                     <span className="red"></span> {product.rate}

@@ -3,7 +3,7 @@
 import React, { useContext } from "react";
 import { ShopContext } from "./shopcontext";
 import { PRODUCTS, PRODUCTS1 } from "./products";
-
+import { Link } from "react-router-dom";
 const ProductDetails = () => {
   const {
     selectedProduct,
@@ -12,6 +12,7 @@ const ProductDetails = () => {
     cartItems,
     removeToCart,
     updateCartItemCount,
+    viewProductDetails,
   } = useContext(ShopContext);
 
   // Set selectedProduct to 0
@@ -48,19 +49,8 @@ const ProductDetails = () => {
                 <span className="text-danger fs-4 me-2">{product.price}$</span>
                 <strike>{product.price * 2}$</strike>
               </p>
-              <p className="card-text">{product.description}</p>
-              <p className="card-text mb-3">
-                Introducing our signature piece. This garment epitomizes
-                contemporary fashion, boasting a sophisticated design that
-                effortlessly blends trendiness with unparalleled comfort and
-                exceptional quality. Crafted from premium, breathable fabrics,
-                this ensures a luxurious feel against the skin while providing
-                maximum comfort throughout the day. Our commitment to offering
-                top-notch quality at an affordable price shines through in this
-                garment. Embrace the latest trends without compromising on
-                comfort or breaking the bank. The Product delivers unbeatable
-                value, allowing you to elevate your style effortlessly.
-              </p>
+              <p className="card-text"></p>
+              <p className="card-text mb-3 fs-4">{product.description}</p>
 
               <div className="d-flex align-items-center mb-3 col-6">
                 <button
@@ -70,7 +60,7 @@ const ProductDetails = () => {
                   +
                 </button>
                 <input
-                  className="form-control text-center"
+                  className=" text-center"
                   type="number"
                   value={cartItems[product.id]}
                   onChange={(e) =>
@@ -85,7 +75,7 @@ const ProductDetails = () => {
                 </button>
               </div>
 
-              <div className="d-flex justify-content-start">
+              <div className="d-flex justify-content-">
                 <button
                   onClick={() => {
                     addToCart(product.id);
@@ -102,44 +92,55 @@ const ProductDetails = () => {
           </div>
           <div className="card">
             <div className="d-flex justify-content-center flex-column align-items-center">
-              <h2 className="text-center mb-2">More products of the same</h2>
-              <p className="mb-2">
-                We have more products, visit the shop to get amazing deals from
-                us!!
+              <h2 className="text-center mb-2 fs-2">
+                More products of the same
+              </h2>
+              <p className="mb-2 fs-3">
+                We have more products, click on the photo to know about the
+                product
               </p>
             </div>
-            <div className="d-none d-md-block">
-              <div className="row mb-3">
-                <div className="col-6 col-md-4 col-lg-8 mx-auto">
-                  <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
-                    {PRODUCTS.slice(3, 7).map((product) => (
-                      <div key={product.id} className="col">
-                        <div className="card h-100">
-                          <img
-                            src={product.image}
-                            className="card-img-top"
-                            alt="..."
-                          />
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
+            <div className="d-none d-md-block p-3">
               <div className="row mb-4">
                 <div className="col-6 col-md-4 col-lg-8 mx-auto">
                   <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
                     {PRODUCTS1.slice(2, 6).map((product) => (
-                      <div key={product.id} className="col">
-                        <div className="card h-100">
-                          <img
-                            src={product.image}
-                            className="card-img-top"
-                            alt="..."
-                          />
-                        </div>
-                      </div>
+                      <Link key={product.id} className="card h-100 m-auto">
+                        <Link
+                          to="/details"
+                          onClick={() => viewProductDetails(product.id)}
+                        >
+                          <div key={product.id} className="col">
+                            <div className="card h-150">
+                              <img src={product.image} className="" alt="..." />
+                            </div>
+                          </div>
+                        </Link>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div className="row mb-3">
+                <div className="col-6 col-md-4 col-lg-8 mx-auto">
+                  <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
+                    {PRODUCTS.slice(3, 7).map((product) => (
+                      <Link key={product.id} className="card h-100 m-auto">
+                        <Link
+                          to="/details"
+                          onClick={() => viewProductDetails(product.id)}
+                        >
+                          <div key={product.id} className="col">
+                            <div className="card h-100">
+                              <img
+                                src={product.image}
+                                className="card-img-top"
+                                alt="..."
+                              />
+                            </div>
+                          </div>
+                        </Link>
+                      </Link>
                     ))}
                   </div>
                 </div>

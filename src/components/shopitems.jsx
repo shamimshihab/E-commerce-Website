@@ -166,9 +166,11 @@ const ShopItems = ({ searchQuery }) => {
             />
           </div>
 
-          <button className="m-2 p-2 " onClick={resetFilters}>
-            Reset Filters
-          </button>
+          <div className="d-flex justify-content-center">
+            <button className="m-2 p-2" onClick={resetFilters}>
+              Reset Filters
+            </button>
+          </div>
         </div>
         <div>
           <div className="row ">
@@ -198,17 +200,19 @@ const ShopItems = ({ searchQuery }) => {
             <></>
           )}
         </div>
-        {filteredProducts.length > 0 ? (
-          <>
-            <div className="paginationDiv">
-              <Pagination
-                itemsPerPage={itemsPerPage}
-                totalItems={filteredProducts.length}
-                paginate={paginate}
-              />
-            </div>
-          </>
-        ) : null}
+        <div className="d-flex justify-content-center align-items-end">
+          {filteredProducts.length > 0 ? (
+            <>
+              <div className="paginationDiv">
+                <Pagination
+                  itemsPerPage={itemsPerPage}
+                  totalItems={filteredProducts.length}
+                  paginate={paginate}
+                />
+              </div>
+            </>
+          ) : null}
+        </div>
       </div>
     </>
   );

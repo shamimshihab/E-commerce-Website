@@ -17,7 +17,9 @@ const NewArrivals = () => {
             />
             <div className="card-body">
               <p className="card-text mb-2">{product.brand}</p>
-              <h5 className="mb-3">{product.name}</h5>
+              <h5 className="mb-3" style={{ height: "5vh" }}>
+                {product.name}
+              </h5>
               <div className="card-footer text-center m-auto">
                 <p className="fs-4 text-danger">{product.status}</p>
                 <p className="price">
