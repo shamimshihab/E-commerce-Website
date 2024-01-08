@@ -70,7 +70,7 @@ export const PRODUCTS = [
     status: "in stock",
     rate: "50% Off",
     gender: "Women",
-    type: "T-Shirt",
+    type: "T-hirt",
     rating: 5,
     description:
       "Adidas presents a comfortable and stylish blue t-shirt designed exclusively for women.",

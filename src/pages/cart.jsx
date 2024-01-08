@@ -2,8 +2,7 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable no-unused-vars */
 import React, { useContext, useState } from "react";
-import pr1 from "../assets/images/products/f1.jpg";
-import pr2 from "../assets/images/products/f2.jpg";
+
 import { RiDeleteBack2Line } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { PRODUCTS } from "../components/products";

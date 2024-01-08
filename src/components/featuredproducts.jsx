@@ -10,7 +10,7 @@ const featuredproducts = () => {
   return (
     <>
       <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 p-3">
-        {PRODUCTS.slice(8, 16).map((product) => (
+        {PRODUCTS.slice(5, 13).map((product) => (
           <div className="col mb-5">
             <div key={product.id} className="card h-10 m-auto">
               <img
